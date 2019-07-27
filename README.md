@@ -1,2 +1,2 @@
-# JavaScript_Coding_Challenges
+# JavaScript Coding Challenges
 A repo for practicing JavaScript Coding Challenges
