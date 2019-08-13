@@ -473,7 +473,81 @@ function checkEvensAndOdds(ints) {
 var output = checkEvensAndOdds([1, 2, 1, 2]);
 console.log(output);
 
-
-
-
 // Call the function
+//--------------------------------------------------------------------------------------------------------------------
+
+/*Write a function called "addObjectProperty".
+
+Given two objects and a key, "addObjectProperty" sets a new property on the 1st object at the given key. The value of that new property is the entire 2nd object.
+
+var person1 = {
+  name: 'Joe Blow',
+  role: 'schlub'
+};
+var person2 = {
+  name: 'Mr. Burns',
+  role: 'supervisor'
+};
+addObjectProperty(person1, 'manager', person2);
+console.log(person1.manager); // --> { name: 'Mr. Burns', role: 'supervisor' }*/
+
+function addObjectProperty(obj1, key, obj2) {
+    obj1[key] = obj2;
+  }
+  var person1 = {
+    name: 'Joe Blow',
+    role: 'schlub'
+  };
+  var person2 = {
+    name: 'Mr.Burns',
+    role: 'supervisor'
+  };
+  addObjectProperty(person1, 'manager', person2);
+  console.log(person1.manager);
+
+  /*Instructions from your teacher:
+ Write a function called "square".
+
+Given a number, "square" should return the square of the given number.
+
+var output = square(5);
+console.log(output); // --> 25*/
+
+function square(num) {
+    return num * num;
+  }
+  var output = square(5);
+  console.log(output);
+
+  /*Write a function called "cube".
+
+Given a number, "cube" returns the cube of that number.
+
+var output = cube(3);
+console.log(output); // --> 27*/
+
+function cube(num) {
+    return Math.pow(num, 3);
+  }
+  var output = cube(3);
+  console.log(output);
+
+  /* Write a function called "isPersonOldEnoughToDrinkAndDrive".
+
+Given a "person" object, that contains an "age" property, "isPersonOldEnoughToDrinkAndDrive" returns whether the given person is old enough to legally drink and drive in the United States.
+
+Notes:* The legal drinking age in the United States is 21.* The legal driving age in the United States is 16.* It is always illegal to drink and drive in the United States.
+
+var obj = {
+  age: 45
+};
+var output = isPersonOldEnoughToDrinkAndDrive(obj);
+console.log(output); // --> false*/
+function isPersonOldEnoughToDrinkAndDrive(person) {
+    return person.age >= 21;
+  }
+  var obj = {
+    age: 45
+  };
+  var output = isPersonOldEnoughToDrinkAndDrive(obj);
+  console.log(output); 
