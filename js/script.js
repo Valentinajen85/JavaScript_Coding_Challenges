@@ -527,7 +527,7 @@ var output = cube(3);
 console.log(output); // --> 27*/
 
 function cube(num) {
-    return Math.pow(num, 3);
+    return Math.pow(num, 3); 
   }
   var output = cube(3);
   console.log(output);
@@ -551,3 +551,29 @@ function isPersonOldEnoughToDrinkAndDrive(person) {
   };
   var output = isPersonOldEnoughToDrinkAndDrive(obj);
   console.log(output); 
+
+
+/*
+
+Write a function called "getLastElement".
+
+Given an array, "getLastElement" returns the last element of the given array.
+Notes: If the given array has a length of 0, it should return 'undefined'.
+
+
+var output = getLastElement([1, 2, 3, 4]);
+console.log(output); // --> 4
+ */
+
+function getLastElement(arr) {
+    return arr[arr.length - 1]; // Alternate option (best)
+    // return arr.length === 0 ? undefined : arr[arr.length - 1]; // Ternary Expression option
+   /* if (arr.length === 0) {
+        return undefined;
+    } else {
+        return arr[arr.length-1];  
+    }*/
+}  
+var output = getLastElement([1, 2, 3, 4]);
+console.log(output);
+ 
