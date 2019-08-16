@@ -1,3 +1,5 @@
+
+
 /* 
 Write a function called splitString that takes a string as an argument
 and return an array with each individual character in the string
@@ -597,3 +599,82 @@ function removeFromFrontOfNew(arr) {
   var output = removeFromFrontOfNew(arr);
   console.log(output); // --> [2, 3]
   console.log(arr); // --> [1, 2, 3]
+
+  /*Write a function called "countCharacter".
+
+Given a string input and a character, "countCharacter" returns the number of occurences of a given character in the given string.
+
+var output = countCharacter('I am a hacker', 'a');
+console.log(output); // --> 3*/
+
+function countCharacter(str, char) {
+    var counter = 0; 
+    for (let i = 0; i<str.length; i++) {
+      if (str[i] === char) {
+        counter ++;
+      } 
+    }
+    return counter; 
+  }
+  var output = countCharacter('I am a hacker','a');
+  console.log(output);
+
+
+  /*
+  Write a function called "removeNumberValues".
+
+Given an object, "removeNumberValues" removes any properties whose valuse are numbers.
+
+var obj = {
+  a: 2,
+  b: 'remaining',
+  c: 4
+};
+removeNumberValues(obj);
+console.log(obj); // --> { b: 'remaining' }
+   */
+  function removeNumberValues(obj) {
+      for (var property in obj) {
+        if (typeof obj[property] === 'number') {
+            delete obj[property];
+         }
+      }
+      return obj;
+  }
+  var obj = {
+    a: 2,
+    b: 'remaining',
+    c: 4
+  };
+  removeNumberValues(obj);
+  console.log(obj); // --> { b: 'remaining' }
+
+
+/*  
+Write a function called "removeStringValues".
+
+Given an object, "removeStringValues" removes any properties on the given object whose values are strings.
+
+var obj = {
+  name: 'Sam',
+  age: 20
+}
+removeStringValues(obj);
+console.log(obj); // { age: 20 }
+  
+*/
+
+function removeStringValues(obj) {
+    for (var property in obj) {
+        if (typeof obj[property] === 'string') {
+            delete obj[property];
+        }
+    }
+    return obj;
+}
+ var myObj = {
+    name: 'Sam',
+    age: 20
+  }
+  removeStringValues(myObj);
+  console.log(myObj); // { age: 20 }
